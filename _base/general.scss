@@ -65,6 +65,10 @@ samp {
   }
 }
 
+code {
+  font-variant-numeric: slashed-zero;
+}
+
 .clearfix {
   display: flow-root;
 }
