@@ -1,0 +1,16 @@
+.img-pull-end,
+.img-pull-start {
+  inline-size: 25%;
+}
+
+.img-pull-start {
+  #main & {
+    margin-inline-end: 24px;
+  }
+}
+
+.img-pull-end {
+  #main & {
+    margin-inline-start: 24px;
+  }
+}
