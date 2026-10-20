@@ -17,7 +17,7 @@ $rwd-hue-step:    math.div(360, $rwd-count);
 
 body {
   &::after {
-    color: $color-white;
+    color: var(--color-white);
     inset-block-start: 0;
     inset-inline-start: 0;
     padding-block: .5rem;

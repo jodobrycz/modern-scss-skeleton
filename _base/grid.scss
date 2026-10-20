@@ -3,7 +3,7 @@
 .container {
   inline-size: 100%;
   margin-inline: auto;
-  padding-inline: $grid-gutter-width;
+  padding-inline: var(--grid-gutter-width);
 }
 
 .wrapper {

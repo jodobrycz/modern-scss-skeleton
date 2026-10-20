@@ -1,34 +1,12 @@
 @use "sass:map";
 @use "variables" as *;
 
-// responsive image
 @mixin responsive-image() {
   block-size: auto;
   display: block;
   inline-size: auto;
   max-inline-size: 100%;
   vertical-align: middle; /* Remove the gap between <img> elements and the bottom of their */
-}
-
-// svg
-@mixin svg-icon-fill($fill: currentColor, $width: 5rem, $height: 5rem) {
-  @include transition(fill);
-  block-size: $height;
-  fill: $fill;
-  fill-rule: evenodd;
-  inline-size: $width;
-  stroke: $fill;
-  stroke-width: 0;
-}
-
-@mixin svg-icon-stroke($stroke: currentColor, $width: 5rem, $height: 5rem) {
-  block-size: $height;
-  fill: none;
-  fill-rule: evenodd;
-  inline-size: $width;
-  stroke: $stroke;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 @mixin visually-hidden() {
@@ -41,37 +19,35 @@
   white-space: nowrap;
 }
 
-@mixin outline($color: currentColor, $colorOutline: currentColor, $width: $outline-width, $offset: $outline-offset) {
+@mixin outline($color: currentColor, $colorOutline: currentColor, $width: var(--outline-width), $offset: var(--outline-offset)) {
   color: $color;
   outline: $width solid $colorOutline;
   outline-offset: $offset;
 }
 
-
 @mixin transition($property: all) {
-  transition: $property $animation-speed ease-in-out;
+  transition: $property var(--animation-speed) ease-in-out;
 }
 
-// scrollbar
-@mixin scrollbar($scrollbar-dimension: $scrollbar-dimension, $scrollbar-radius: $scrollbar-radius) {
+@mixin scrollbar($dimension: var(--scrollbar-dimension), $radius: var(--scrollbar-radius)) {
   @supports (scrollbar-width: auto) {
-    scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color; /* thumb and track color */
-    scrollbar-width: thin; /* value: none, thin, auto */
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color); /* thumb and track color */
+    scrollbar-width: auto; /* value: none, thin, auto */
   }
 
   &::-webkit-scrollbar {
     -webkit-appearance: none;
-    block-size: $scrollbar-dimension;
-    inline-size: $scrollbar-dimension;
+    block-size: $dimension;
+    inline-size: $dimension;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $scrollbar-thumb-color;
-    border-radius: $scrollbar-radius;
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: $radius;
   }
 
   &::-webkit-scrollbar-track {
-    background-color: $scrollbar-track-color;
+    background-color: var(--scrollbar-track-color);
   }
 }
 

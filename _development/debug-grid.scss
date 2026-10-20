@@ -1,8 +1,8 @@
 @use "../_abstracts/abstracts" as *;
 @use "../_pages/variables" as *;
 
-$debug-grid-background: rgba(#f00, .15);
-$debug-grid-gutter-width: $grid-gutter-width;
+$debug-grid-background: oklch(62.8% 0.258 29.23 / .15);
+$debug-grid-gutter-width: var(--grid-gutter-width);
 
 $debug-grid-container-max-widths: (
   xs: 80ch

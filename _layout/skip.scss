@@ -5,14 +5,14 @@
   @include transition(transform);
 
   & {
-    background: $color-white;
+    background: var(--color-white);
     inline-size: 100%;
     inset-inline: 0;
     position: fixed;
     text-align: center;
     text-decoration: none;
     transform: translate(0, -100%);
-    z-index: #{map.get($zindex, skip)};
+    z-index: var(--zindex-skip);
   }
 
   &:focus-within {
