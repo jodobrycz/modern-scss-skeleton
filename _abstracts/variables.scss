@@ -11,14 +11,16 @@
 // Define the breakpoints at which your layout will change, adapting to different screen sizes.
 //
 $grid-breakpoints: (
-  xxs:     0,
-  xs:     20em, // 320px
-  sm:     30em, // 480px
-  md:     40em, // 640px
-  lg:     48em, // 768px
-  xl:     62em, // 992px
+  2xs:     0, // 480px
+  xxs:    30em, // 480px
+   xs:    36em, // 576px
+   sm:    40em, // 640px
+   md:    48em, // 768px
+   lg:    62em, // 992px
+   xl:    62em, // 1024px
   2xl:    75em, // 1200px
-  3xl:    80em  // 1280px
+  3xl:    80em, // 1280px
+  4xl:    96em  // 1536px
 );
 
 

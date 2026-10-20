@@ -33,11 +33,7 @@ html {
   /* Smooth scrolling for users that don't prefer reduced motion */
   @media (prefers-reduced-motion: no-preference) {
     interpolate-size: allow-keywords;
-
-    &:focus-within,
-    :has(:target) {
-      scroll-behavior: smooth;
-    }
+    scroll-behavior: smooth;
   }
 
   &.translated-rtl {
@@ -51,6 +47,11 @@ body {
   min-block-size: 100dvb; /* Ensure the body element's `min-height` is at least the viewport height. */
   overflow-x: clip;
   position: relative;
+
+  /*
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  */
 
   /* Better font rendering. */
   -webkit-text-size-adjust: none; /* Prevent adjustments of font size after orientation changes in iOS. */
