@@ -1,9 +1,12 @@
 @use "../_abstracts/abstracts" as *;
 
 .btn {
-  display: inline-flex;
-  text-decoration: none;
-  transition: all $animation-speed ease-in-out;
+  @include transition(all);
+
+  & {
+    display: inline-flex;
+    text-decoration: none;
+  }
 
   &:hover {
 

@@ -20,5 +20,11 @@
 }
 
 :where(svg) {
-  @include svg-icon-fill();
+  block-size: 2.4rem;
+  fill: none;
+  fill-rule: evenodd;
+  inline-size: 2.4rem;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }

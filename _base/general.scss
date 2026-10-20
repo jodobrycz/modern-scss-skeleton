@@ -6,8 +6,8 @@ html, body {
 
 body {
   accent-color: currentColor;
-  color: $text-color;
-  font-family: $font-family-base;
+  color: var(--text-color);
+  font-family: var(--font-family-base);
 
   * {
     &:focus-visible {

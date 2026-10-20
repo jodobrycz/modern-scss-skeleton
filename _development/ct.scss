@@ -1,9 +1,9 @@
-/*!==========================================================================
+/*==========================================================================
    #CT.CSS
    ==========================================================================
  */
 
-/*!
+/*
  * ct.css – Let’s take a look inside your <head>…
  *
  * © Harry Roberts 2021 – twitter.com/csswizardry
@@ -19,9 +19,9 @@
 head {
   --ct-is-problematic: solid;
   --ct-is-affected: dashed;
-  --ct-notify: #0bce6b;
-  --ct-warn: #ffa400;
-  --ct-error: #ff4e42;
+  --ct-notify: oklch(74.63% 0.195 152.01);
+  --ct-warn: oklch(79.09% 0.171 70.15);
+  --ct-error: oklch(67.25% 0.215 28.2);
 }
 
 
@@ -46,9 +46,9 @@ head style, head [rel="stylesheet"],
 head title,
 head script ~ meta[http-equiv="content-security-policy"],
 head > meta[charset]:not(:nth-child(-n+5)) {
-  background-color: white;
+  background-color: oklch(100% 0 0);
   border-width: 5px;
-  color: #333;
+  color: oklch(32.11% 0 0);
   margin: 5px;
   padding: 5px;
 }
@@ -91,7 +91,7 @@ head link[rel="stylesheet"]::before {
 
 head style:not(:empty),
 head script:not(:empty) {
-  background-color: #ffd;
+  background-color: oklch(99.13% 0.044 107.18);
   border-color: var(--ct-notify);
   border-style: var(--ct-is-problematic);
   max-height: 5em;
