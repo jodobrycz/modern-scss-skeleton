@@ -1,4 +1,3 @@
-@use "sass:math";
 @use "../_abstracts/abstracts" as *;
 
 :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4) {
@@ -43,11 +42,14 @@ strong,
 
 /* Baseline for default links */
 a {
-  background-color: transparent; /* Remove the gray background on active links in IE 10. */
-  color: $link-color;
-  text-decoration: underline;
-  text-underline-offset: .2rem;
-  transition: all $animation-speed ease-in-out;
+  @include transition(all);
+
+  & {
+    background-color: transparent; /* Remove the gray background on active links in IE 10. */
+    color: var(--link-color);
+    text-decoration: underline;
+    text-underline-offset: .2rem;
+  }
 
   &:visited {
 
@@ -100,14 +102,14 @@ a {
 }
 
 ::selection {
-  background-color: #b3d4fc; /* Restore the coloring undone by defining the text shadow all browsers (opinionated). */
-  color: #000; /* Restore the coloring undone by defining the text shadow all browsers (opinionated). */
+  background-color: oklch(85.94% 0.066 253.44); /* Restore the coloring undone by defining the text shadow all browsers (opinionated). */
+  color: oklch(0% 0 0); /* Restore the coloring undone by defining the text shadow all browsers (opinionated). */
   text-shadow: none;
 }
 
 ::target-text {
-  background-color: #b3d4fc; /* Restore the coloring undone by defining the text shadow all browsers (opinionated). */
-  color: #000; /* Restore the coloring undone by defining the text shadow all browsers (opinionated). */
+  background-color: oklch(85.94% 0.066 253.44); /* Restore the coloring undone by defining the text shadow all browsers (opinionated). */
+  color: oklch(0% 0 0); /* Restore the coloring undone by defining the text shadow all browsers (opinionated). */
   text-shadow: none;
 }
 
@@ -122,7 +124,7 @@ blockquote {
 }
 
 small {
-  font-size: math.percentage(math.div(5, 6)); /* Add the correct font size in all browsers. */
+  font-size: calc(5 / 6 * 100%); /* Add the correct font size in all browsers. */
 }
 
 kbd {

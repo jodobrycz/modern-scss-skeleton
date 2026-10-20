@@ -1,7 +1,7 @@
 @use "../_abstracts/abstracts" as *;
 
 .btn {
-  border: .2rem solid $text-color;
+  border: .2rem solid var(--text-color);
   padding-block: 1.2rem;
   padding-inline: 24px;
 }

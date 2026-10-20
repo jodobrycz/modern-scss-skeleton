@@ -1,5 +1,8 @@
 @use "../_abstracts/abstracts" as *;
-
+html, body {
+  --scrollbar-thumb-color: #f00;
+  @include scrollbar(var(--scrollbar-thumb-color));
+}
 body {
   font-family: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
   font-size: 2rem;
@@ -33,11 +36,11 @@ blockquote {
 }
 
 [popover] {
-  background-color: $color-white;
+  background-color: var(--color-white);
   max-inline-size: 50rem;
   padding: 20px;
 
   &::backdrop {
-    background: rgba($color-black, .5);
+    background-color: oklch(from var(--color-black) l c h / .5);
   }
 }
